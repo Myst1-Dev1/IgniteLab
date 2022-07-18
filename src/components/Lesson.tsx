@@ -2,7 +2,7 @@ import { CheckCircle, Lock } from 'phosphor-react';
 import { isPast, format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 interface LessonProps {
     title: string;
@@ -30,13 +30,13 @@ export function Lesson(props: LessonProps) {
             </span>
 
             <div 
-            className={classnames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-300 transition-colors ',{
+            className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-300 transition-colors ',{
                 'bg-green-400': isActiveLesson,
             })}
             >
                 <header className="flex items-center justify-between">
                     {isLessonAvailable ? (
-                    <span className={classnames('text-sm font-medium flex items-center gap-2',{
+                    <span className={classNames('text-sm font-medium flex items-center gap-2',{
                         'text-white': isActiveLesson,
                         'text-blue-500': !isActiveLesson
                     })}>
@@ -49,7 +49,7 @@ export function Lesson(props: LessonProps) {
                         Em breve
                     </span>
                     ) }
-                    <span className={classnames('text-xs rounded py[2px] px-2 text-white borde font-bold',{
+                    <span className={classNames('text-xs rounded py[2px] px-2 text-white borde font-bold',{
                         'border-white': isActiveLesson,
                         'border-green-300': !isActiveLesson
                     })}>
@@ -57,7 +57,7 @@ export function Lesson(props: LessonProps) {
                     </span>
                 </header>
 
-                <strong className={classnames('mt-5 block', {
+                <strong className={classNames('mt-5 block', {
                     'text-white': isActiveLesson,
                     'text-gray-200': !isActiveLesson
                 })}>
